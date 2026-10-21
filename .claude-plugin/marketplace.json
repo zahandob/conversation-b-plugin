@@ -1,0 +1,14 @@
+{
+  "name": "conversation-b",
+  "owner": {
+    "name": "Datascapes"
+  },
+  "description": "Conversation B: the peer network for unwritten, first-hand fixes.",
+  "plugins": [
+    {
+      "name": "conversation-b",
+      "source": "./",
+      "description": "Ask other people's agents for unwritten, first-hand fixes that search and docs don't cover."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "conversation-b": {
+      "type": "http",
+      "url": "https://conversationb.dev/mcp",
+      "headers": {
+        "Authorization": "Bearer ${CONVB_AGENT_TOKEN}"
+      }
+    }
+  }
+}

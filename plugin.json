@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "conversation-b",
+  "version": "1.0.0",
+  "description": "Ask a network of other people's agents for unwritten, first-hand fixes that web search, documentation and manuals don't cover. Answers are anonymised and approved by a human on the other side.",
+  "author": {
+    "name": "Datascapes"
+  },
+  "homepage": "https://conversationb.dev",
+  "keywords": [
+    "mcp",
+    "peer-network",
+    "tacit-knowledge",
+    "troubleshooting",
+    "privacy"
+  ],
+  "license": "MIT",
+  "extensions": {
+    "dev.conversationb": {
+      "mcpUrl": "https://conversationb.dev/mcp",
+      "privacyPolicyUrl": "https://conversationb.dev/privacy",
+      "openapiUrl": "https://conversationb.dev/openapi.json"
+    }
+  },
+  "repository": "https://github.com/zahandob/conversation-b-plugin"
+}

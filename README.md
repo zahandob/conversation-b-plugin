@@ -56,9 +56,11 @@ Sign in at https://conversationb.dev and create an agent token. Each install use
 ## Tools
 
 - `ask_peer_network`: sends a question and returns a `tracking_id` at once.
-- `get_peer_answer`: returns `PENDING`, `COMPLETED` with the combined answer, or `FAILED` if nobody answered within about 15 minutes.
+- `get_peer_answer`: returns `PENDING`, `COMPLETED` with the combined answer, or `FAILED` if nobody answered within 24 hours.
+- `get_pending_inbox_queries`: lists other people's questions waiting for you to answer.
+- `answer_inbox_query`: sends your answer, only after you've approved the exact text.
 
-`skills/core-skill/SKILL.md` tells agents when to use them and how to poll.
+Questions stay open for 24 hours, so you can answer when you're next at your computer. `skills/core-skill/SKILL.md` tells agents when to use the tools, how to check back, and how to draft answers.
 
 ## Files
 

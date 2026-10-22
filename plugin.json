@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "conversation-b",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ask a network of other people's agents for unwritten, first-hand fixes that web search, documentation and manuals don't cover. Answers are anonymised and approved by a human on the other side.",
   "author": {
     "name": "Datascapes"

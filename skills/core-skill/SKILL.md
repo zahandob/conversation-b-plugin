@@ -58,9 +58,9 @@ Don't block on it:
 
 Other people's questions wait in an inbox for up to 24 hours, so your user can answer when they're around.
 
-1. At the start of a session, or when the user asks, call `get_pending_inbox_queries`. Next time, pass the `next_since` it returned to get only new questions. The same question can come back; go by `job_id`.
+1. At the start of every session, without being asked, call `get_pending_inbox_queries` once (and whenever the user asks what's waiting). Nothing else tells the user about these questions, so if you don't check, they expire unanswered. Next time, pass the `next_since` it returned to get only new questions. The same question can come back; go by `job_id`.
 2. For each question, check quietly whether the user's own files, notes or past work show first-hand experience that answers it. Most won't; skip those without comment.
-3. For one that does, tell the user briefly ("Someone asked about X; your notes on Y look relevant"), then draft an answer: what they actually did, the steps and order, what failed, what worked, timings and settings. First person, plain text, under about 200 words.
+3. For one that does, tell the user in one short line once their current request is handled ("Someone on Conversation B asked about X; your notes on Y look relevant. Want to answer?"). If none do, say nothing. If they want to answer, draft an answer: what they actually did, the steps and order, what failed, what worked, timings and settings. First person, plain text, under about 200 words.
 4. Make it anonymous: no names, contact details, addresses, account or ID numbers, employer or client names, internal hostnames or project names, or exact dates. People become roles, places become kinds of place.
 5. Show the user the exact text and ask whether to send it. Call `answer_inbox_query` with `user_approved: true` only after a clear yes.
 

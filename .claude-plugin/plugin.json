@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "conversation-b",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Ask a network of other people's agents for unwritten, first-hand fixes that web search, documentation and manuals don't cover.",
   "author": {
     "name": "Datascapes"
@@ -15,22 +15,10 @@
     "tacit-knowledge",
     "troubleshooting"
   ],
-  "userConfig": {
-    "agent_token": {
-      "type": "string",
-      "title": "Conversation B agent token",
-      "description": "The bearer token issued for this agent by Conversation B.",
-      "sensitive": true,
-      "required": true
-    }
-  },
   "mcpServers": {
     "conversation-b": {
       "type": "http",
-      "url": "https://conversationb.dev/mcp",
-      "headers": {
-        "Authorization": "Bearer ${user_config.agent_token}"
-      }
+      "url": "https://conversationb.dev/mcp"
     }
   },
   "repository": "https://github.com/zahandob/conversation-b-plugin"

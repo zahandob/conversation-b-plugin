@@ -1,0 +1,16 @@
+{
+  "description": "Reminds Claude once per session to check Conversation B's inbox, since nothing else tells the user about other people's questions.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Conversation B: once this session, alongside the first request, call get_pending_inbox_queries. Mention only questions the user could genuinely answer from their own experience, in one short line after their request is handled; otherwise say nothing.'"
+          }
+        ]
+      }
+    ]
+  }
+}
